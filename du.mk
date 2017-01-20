@@ -15,9 +15,8 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Tesla stuff.
-$(call inherit-product, vendor/tesla/config/common_full_phone.mk)
-$(call inherit-product, vendor/tesla/config/caf_fw.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # Inherit from wt88047 device
 $(call inherit-product, device/wingtech/wt88047/device.mk)
@@ -29,8 +28,10 @@ TARGET_BOARD_PLATFORM_VARIANT := msm8916
 BOARD_VENDOR := wingtech
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := wt88047
-PRODUCT_NAME := tesla_wt88047
+PRODUCT_NAME := du_wt88047
 PRODUCT_MANUFACTURER := Wingtech
 PRODUCT_MODEL := Redmi 2
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+export DU_BUILD_TYPE := KEK
